@@ -20,13 +20,13 @@ bot = catub
 StartTime = time.time()
 catversion = "3.0.4"
 
-if Config.UPSTREAM_REPO == "badcat":
-    UPSTREAM_REPO_URL = "https://github.com/TeamFussion/Fussion"
-elif Config.UPSTREAM_REPO == "goodcat":
-    UPSTREAM_REPO_URL = "https://github.com/TeamFussion/Fussion"
+if Config.FUSSION_REPO == "Fussion":
+    FUSSION_REPO_URL = "https://github.com/TeamFussion/Fussion"
+elif Config.FUSSION_REPO == "Fusion":
+    FUSSION_REPO_URL = "https://github.com/TeamFussion/Fussion"
 else:
-   # UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
-     UPSTREAM_REPO_URL = "https://github.com/TeamFussion/Fussion"
+   # FUSSION_REPO_URL = Config.FUSSION_REPO
+     FUSSION_REPO_URL = "https://github.com/TeamFussion/Fussion"
 
 if Config.PRIVATE_GROUP_BOT_API_ID == 0:
     if gvarstatus("PRIVATE_GROUP_BOT_API_ID") is None:
