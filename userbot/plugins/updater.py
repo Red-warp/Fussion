@@ -8,7 +8,7 @@ import urllib3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import HEROKU_APP, UPSTREAM_REPO_URL, catub
+from userbot import HEROKU_APP, FUSSION_REPO_URL, catub
 
 from ..Config import Config
 from ..core.logger import logging
@@ -335,4 +335,4 @@ async def variable(var):
         )
     heroku_var = app.config()
     await edit_or_reply(var, "`Changing badcat to goodcat wait for 2-3 minutes.`")
-    heroku_var["UPSTREAM_REPO"] = "https://github.com/TeamFussion/Fussion"
+    heroku_var["FUSSION_REPO"] = "https://github.com/TeamFussion/Fussion"
