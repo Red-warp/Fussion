@@ -81,23 +81,18 @@ async def amireallyalive(event):
 fusion_text = "𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭"
 fusion_text += f"This is {mention}"
 fusion_text += "𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭"
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
-fusion_text +=
+fusion_text += "✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵"
+fusion_text += "╔════❰ Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ ❱═❍⊱❁۪۪"
+fusion_text += "║╭━━━━━━━━━━━━━━━➣"
+fusion_text += f"║┣⪼ **Ⲟⲱⲛⲉʀ** - `{mention}`"
+fusion_text += f"║┣⪼ **Ⲋⲧⲁⲧυⲋ** - `Ⲟⲛⳑⲓⲛⲉ`"
+fusion_text += f"║┣⪼ **Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ** - `{catver}`"
+fusion_text += f"║┣⪼ **Ⳙⲣⲧⲓⲙⲉ** - `2m.42s`"
+fusion_text += f"║┣⪼ **Ⲃⲟⲧ Ⲣⲓⲛⳋ** - `0.004`"
+fusion_text += f"║┣⪼ **Ⲣⲩⲧⲏⲟⲛ** - `{pyver}`"
+fusion_text += f"║┣⪼ **Ⲧⲉⳑⲉⲧⲏⲟⲛ** - `{telever}`"
+fusion_text += f"║╰━━━━━━━━━━━━━━━➣"
+fusion_text += f"╚══════════════════❍⊱❁۪۪"
 
 temp = """{ALIVE_TEXT}
 **{EMOJI} Master:** {mention}
