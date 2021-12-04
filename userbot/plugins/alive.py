@@ -47,7 +47,7 @@ async def amireallyalive(event):
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
     ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or fusion_text
     CAT_IMG = gvarstatus("ALIVE_PIC")
-    cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
+   # cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         EMOJI=EMOJI,
@@ -93,14 +93,6 @@ fusion_text += f"║┣⪼ **Ⲣⲩⲧⲏⲟⲛ** - `{pyver}`"
 fusion_text += f"║┣⪼ **Ⲧⲉⳑⲉⲧⲏⲟⲛ** - `{telever}`"
 fusion_text += f"║╰━━━━━━━━━━━━━━━➣"
 fusion_text += f"╚══════════════════❍⊱❁۪۪"
-
-temp = """{ALIVE_TEXT}
-**{EMOJI} Master:** {mention}
-**{EMOJI} Uptime :** `{uptime}`
-**{EMOJI} Telethon Version :** `{telever}`
-**{EMOJI} Catuserbot Version :** `{catver}`
-**{EMOJI} Python Version :** `{pyver}`
-**{EMOJI} Database :** `{dbhealth}`"""
 
 
 @catub.cat_cmd(
