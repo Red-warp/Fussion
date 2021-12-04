@@ -100,7 +100,7 @@ async def amireallyalive(event):
     "A kind of showing bot details by your inline bot"
     reply_to_id = await reply_id(event)
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
-    ALIVE_TEMP = gvarstatus("ALIVE_TEMP") or f"**🔥🔥Đ₳Ɽ₭ Ƒմʂʂìօղ ɨs օռʟɨռɛ🔥🔥\n\n\t↼🄼🄰🅂🅃🄴🅁⇀\n\n\t『{mention}』**\n\n╭━━━━━━━━━━━━━━━➣\n┣⪼**🛡️TELETHON🛡️** : `1.15.0`\n┣⪼💎**Đ₳Ɽ₭ Ƒմʂʂìօղ**💎   : `1.0.20`\n┣⪼**⚜️Sudo⚜️**           : True\n┣⪼**⚠️CHANNEL⚠️**   : [ᴊᴏɪɴ](https://t.me/DarkFussion)\n┣⪼**🔥CREATOR🔥**    : Nub\n╰━━━━━━━━━━━━━━━➣\n✨[REPO](https://github.com/TeamFussion/Dark_Fussion)✨  🔹  📜[License](https://github.com/TeamFussion/Dark_Fussion/blob/master/LICENSE)📜
+    ALIVE_TEMP = gvarstatus("ALIVE_TEMP") or f"**🔥🔥Đ₳Ɽ₭ Ƒմʂʂìօղ ɨs օռʟɨռɛ🔥🔥\n\n\t↼🄼🄰🅂🅃🄴🅁⇀\n\n\t『{mention}』**\n\n╭━━━━━━━━━━━━━━━➣\n┣⪼**🛡️TELETHON🛡️** : `1.15.0`\n┣⪼💎**Đ₳Ɽ₭ Ƒմʂʂìօղ**💎   : `1.0.20`\n┣⪼**⚜️Sudo⚜️**           : True\n┣⪼**⚠️CHANNEL⚠️**   : [ᴊᴏɪɴ](https://t.me/DarkFussion)\n┣⪼**🔥CREATOR🔥**    : Nub\n╰━━━━━━━━━━━━━━━➣\n✨[REPO](https://github.com/TeamFussion/Dark_Fussion)✨  🔹  📜[License](https://github.com/TeamFussion/Dark_Fussion/blob/master/LICENSE)📜"
     cat_caption = f"{ALIVE_TEMP}"
     results = await event.client.inline_query(Config.TG_BOT_USERNAME, cat_caption)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
