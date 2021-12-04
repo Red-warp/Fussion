@@ -46,7 +46,7 @@ async def amireallyalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or fusion_text
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "Hi"
     CAT_IMG = gvarstatus("ALIVE_PIC")
     cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
@@ -87,22 +87,6 @@ temp = """{ALIVE_TEXT}
 **{EMOJI} Python Version :** `{pyver}`
 **{EMOJI} Uptime :** `{uptime}`
 **{EMOJI} Master:** {mention}"""
-
-fusion_text = "𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭"
-fusion_text += f"**This is** {mention}"
-fusion_text += "𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭"
-fusion_text += "✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵"
-fusion_text += "╔════❰ Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ ❱═❍⊱❁۪۪"
-fusion_text += "║╭━━━━━━━━━━━━━━━➣"
-fusion_text += f"║┣⪼ **Ⲟⲱⲛⲉʀ** - `{mention}`"
-fusion_text += f"║┣⪼ **Ⲋⲧⲁⲧυⲋ** - `Ⲟⲛⳑⲓⲛⲉ`"
-fusion_text += f"║┣⪼ **Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ** - `{catver}`"
-fusion_text += f"║┣⪼ **Ⳙⲣⲧⲓⲙⲉ** - `2m.42s`"
-fusion_text += f"║┣⪼ **Ⲃⲟⲧ Ⲣⲓⲛⳋ** - `0.004`"
-fusion_text += f"║┣⪼ **Ⲣⲩⲧⲏⲟⲛ** - `{pyver}`"
-fusion_text += f"║┣⪼ **Ⲧⲉⳑⲉⲧⲏⲟⲛ** - `{telever}`"
-fusion_text += f"║╰━━━━━━━━━━━━━━━➣"
-fusion_text += f"╚══════════════════❍⊱❁۪۪"
 
 
 @catub.cat_cmd(
