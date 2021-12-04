@@ -1,3 +1,4 @@
+
 import random
 import re
 import time
@@ -44,10 +45,10 @@ async def amireallyalive(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or fusion_text
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or can
     CAT_IMG = gvarstatus("ALIVE_PIC")
-   # cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
+    cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         EMOJI=EMOJI,
@@ -78,21 +79,16 @@ async def amireallyalive(event):
             caption,
         )
 
-fusion_text = "𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭"
-fusion_text += f"This is {mention}"
-fusion_text += "𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭"
-fusion_text += "✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵"
-fusion_text += "╔════❰ Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ ❱═❍⊱❁۪۪"
-fusion_text += "║╭━━━━━━━━━━━━━━━➣"
-fusion_text += f"║┣⪼ **Ⲟⲱⲛⲉʀ** - `{mention}`"
-fusion_text += f"║┣⪼ **Ⲋⲧⲁⲧυⲋ** - `Ⲟⲛⳑⲓⲛⲉ`"
-fusion_text += f"║┣⪼ **Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ** - `{catver}`"
-fusion_text += f"║┣⪼ **Ⳙⲣⲧⲓⲙⲉ** - `2m.42s`"
-fusion_text += f"║┣⪼ **Ⲃⲟⲧ Ⲣⲓⲛⳋ** - `0.004`"
-fusion_text += f"║┣⪼ **Ⲣⲩⲧⲏⲟⲛ** - `{pyver}`"
-fusion_text += f"║┣⪼ **Ⲧⲉⳑⲉⲧⲏⲟⲛ** - `{telever}`"
-fusion_text += f"║╰━━━━━━━━━━━━━━━➣"
-fusion_text += f"╚══════════════════❍⊱❁۪۪"
+
+temp = """{ALIVE_TEXT}
+**{EMOJI} Database :** `{dbhealth}`
+**{EMOJI} Telethon Version :** `{telever}`
+**{EMOJI} Catuserbot Version :** `{catver}`
+**{EMOJI} Python Version :** `{pyver}`
+**{EMOJI} Uptime :** `{uptime}`
+**{EMOJI} Master:** {mention}"""
+
+can = "Hi"
 
 
 @catub.cat_cmd(
@@ -109,9 +105,9 @@ fusion_text += f"╚══════════════════❍⊱
 async def amireallyalive(event):
     "A kind of showing bot details by your inline bot"
     reply_to_id = await reply_id(event)
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
-
-    cat_caption = "**Catuserbot is Up and Running**\n"
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**Catuserbot is Up and Running**"
+    cat_caption = f"{ALIVE_TEXT}\n"
     cat_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
     cat_caption += f"**{EMOJI} Catuserbot Version :** `{catversion}`\n"
     cat_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
