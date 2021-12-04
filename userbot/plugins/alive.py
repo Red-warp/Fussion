@@ -45,7 +45,7 @@ async def amireallyalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**✮ MY BOT IS RUNNING SUCCESSFULLY ✮**"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or fusion_text
     CAT_IMG = gvarstatus("ALIVE_PIC")
     cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
@@ -78,6 +78,26 @@ async def amireallyalive(event):
             caption,
         )
 
+fusion_text = "𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭"
+fusion_text += f"This is {mention}"
+fusion_text += "𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭"
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
+fusion_text +=
 
 temp = """{ALIVE_TEXT}
 **{EMOJI} Master:** {mention}
