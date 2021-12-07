@@ -47,7 +47,7 @@ async def amireallyalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or f"𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭\n**This is** {DEFAULTUSER}\n𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭\n✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵\n╔════❰ Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ ❱═❍⊱❁۪۪\n║╭━━━━━━━━━━━━━━━➣\n║┣⪼ **Ⲟⲱⲛⲉʀ** - `{DEFAULTUSER}`\n║┣⪼ **Ⲋⲧⲁⲧυⲋ** - `Ⲟⲛⳑⲓⲛⲉ`\n║┣⪼ **Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ** - `1.2.7`\n║┣⪼ **Ⳙⲣⲧⲓⲙⲉ** - `2m.42s`\n║┣⪼ **Ⲃⲟⲧ Ⲣⲓⲛⳋ** - `0.004`\n║┣⪼ **Ⲣⲩⲧⲏⲟⲛ** - `3.9.96`\n║┣⪼ **Ⲧⲉⳑⲉⲧⲏⲟⲛ** - `1.23.0`\n║╰━━━━━━━━━━━━━━━➣\n╚══════════════════❍⊱❁۪۪"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or f"𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭\n**This is** {DEFAULTUSER}\n𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭\n✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵\n╔════❰ Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ ❱═❍⊱❁۪۪\n║╭━━━━━━━━━━━━━━━➣\n║┣⪼ **Ⲟⲱⲛⲉʀ** - `{DEFAULTUSER}`\n║┣⪼ **Ⲋⲧⲁⲧυⲋ** - `Ⲟⲛⳑⲓⲛⲉ`\n║┣⪼ **Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ** - `1.2.7`\n║┣⪼ **Ⳙⲣⲧⲓⲙⲉ** - `{uptime}`\n║┣⪼ **Ⲃⲟⲧ Ⲣⲓⲛⳋ** - `{ping}`\n║┣⪼ **Ⲣⲩⲧⲏⲟⲛ** - `{pyver}`\n║┣⪼ **Ⲧⲉⳑⲉⲧⲏⲟⲛ** - `{televar}`\n║╰━━━━━━━━━━━━━━━➣\n╚══════════════════❍⊱❁۪۪"
     CAT_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/dc2abead85cc82f06c1ef.mp4"
     cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
