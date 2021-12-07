@@ -99,7 +99,8 @@ async def amireallyalive(event):
     "A kind of showing bot details by your inline bot"
     reply_to_id = await reply_id(event)
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
-
+    IALIVE_PIC = config.IALIVE_PIC or "https://te.legra.ph/file/91e5001521689a5967b0a.mp4"
+    IALIVE_PIC,
     cat_caption = "**Catuserbot is Up and Running**\n"
     cat_caption += f"**{EMOJI} Telethon version :** {version.__version__}\n"
     cat_caption += f"**{EMOJI} Catuserbot Version :** {catversion}\n"
