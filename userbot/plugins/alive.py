@@ -1,4 +1,3 @@
-
 import random
 import re
 import time
@@ -22,6 +21,8 @@ from ..helpers.utils import reply_id
 from ..sql_helper.globals import gvarstatus
 from . import mention
 
+DEFAULTUSER = Config.ALIVE_NAME
+
 plugin_category = "utils"
 
 
@@ -41,13 +42,13 @@ async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await edit_or_reply(event, "Checking...")
+    catevent = await edit_or_reply(event, "Checking...")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**✮ MY BOT IS RUNNING SUCCESSFULLY ✮**"
-    CAT_IMG = gvarstatus("ALIVE_PIC")
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or f"𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭\n**This is** {DEFAULTUSER}\n𝐃𝐚𝐫𝐤 𝐅𝐮𝐬𝐬𝐢𝐨𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭\n✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵\n╔════❰ Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ ❱═❍⊱❁۪۪\n║╭━━━━━━━━━━━━━━━➣\n║┣⪼ Ⲟⲱⲛⲉʀ - {DEFAULTUSER}\n║┣⪼ Ⲋⲧⲁⲧυⲋ - Ⲟⲛⳑⲓⲛⲉ\n║┣⪼ Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ - 1.2.7\n║┣⪼ Ⳙⲣⲧⲓⲙⲉ - 2m.42s\n║┣⪼ Ⲃⲟⲧ Ⲣⲓⲛⳋ - 0.004\n║┣⪼ Ⲣⲩⲧⲏⲟⲛ - 3.9.96\n║┣⪼ Ⲧⲉⳑⲉⲧⲏⲟⲛ - 1.23.0\n║╰━━━━━━━━━━━━━━━➣\n╚══════════════════❍⊱❁۪۪"
+    CAT_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/dc2abead85cc82f06c1ef.mp4"
     cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
@@ -67,26 +68,20 @@ async def amireallyalive(event):
             await event.client.send_file(
                 event.chat_id, PIC, caption=caption, reply_to=reply_to_id
             )
-            await event.delete()
+            await catevent.delete()
         except (WebpageMediaEmptyError, MediaEmptyError, WebpageCurlFailedError):
             return await edit_or_reply(
-                event,
-                f"**Media Value Error!!**\n__Change the link by __`.setdv`\n\n**__Can't get media from this link :-**__ `{PIC}`",
+                catevent,
+                f"**Media Value Error!!**\n__Change the link by __.setdv\n\n**__Can't get media from this link :-**__ {PIC}",
             )
     else:
         await edit_or_reply(
-            event,
+            catevent,
             caption,
         )
 
 
-temp = """{ALIVE_TEXT}
-**{EMOJI} Database :** `{dbhealth}`
-**{EMOJI} Telethon Version :** `{telever}`
-**{EMOJI} Catuserbot Version :** `{catver}`
-**{EMOJI} Python Version :** `{pyver}`
-**{EMOJI} Uptime :** `{uptime}`
-**{EMOJI} Master:** {mention}"""
+temp = "{ALIVE_TEXT}"
 
 
 @catub.cat_cmd(
@@ -103,17 +98,16 @@ temp = """{ALIVE_TEXT}
 async def amireallyalive(event):
     "A kind of showing bot details by your inline bot"
     reply_to_id = await reply_id(event)
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**Catuserbot is Up and Running**"
-    cat_caption = f"{ALIVE_TEXT}\n"
-    cat_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**{EMOJI} Catuserbot Version :** `{catversion}`\n"
-    cat_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
+
+    cat_caption = "**Catuserbot is Up and Running**\n"
+    cat_caption += f"**{EMOJI} Telethon version :** {version.__version__}\n"
+    cat_caption += f"**{EMOJI} Catuserbot Version :** {catversion}\n"
+    cat_caption += f"**{EMOJI} Python Version :** {python_version()}\n"
     cat_caption += f"**{EMOJI} Master:** {mention}\n"
     results = await event.client.inline_query(Config.TG_BOT_USERNAME, cat_caption)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
     await event.delete()
-
 
 @catub.tgbot.on(CallbackQuery(data=re.compile(b"stats")))
 async def on_plug_in_callback_query_handler(event):
