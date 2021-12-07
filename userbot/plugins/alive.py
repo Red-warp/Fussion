@@ -51,6 +51,7 @@ async def amireallyalive(event):
     CAT_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/dc2abead85cc82f06c1ef.mp4"
     cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
+        IALIVE_PIC = IALIVE_PIC,
         ALIVE_TEXT=ALIVE_TEXT,
         EMOJI=EMOJI,
         mention=mention,
@@ -100,7 +101,6 @@ async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
     IALIVE_PIC = gvarstatus("IALIVE_PIC") or "https://te.legra.ph/file/91e5001521689a5967b0a.mp4"
-    IALIVE_PIC,
     cat_caption = "**Catuserbot is Up and Running**\n"
     cat_caption += f"**{EMOJI} Telethon version :** {version.__version__}\n"
     cat_caption += f"**{EMOJI} Catuserbot Version :** {catversion}\n"
