@@ -99,7 +99,7 @@ async def amireallyalive(event):
     "A kind of showing bot details by your inline bot"
     reply_to_id = await reply_id(event)
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
-    cat_caption = "┏━━━━━━✦❘༻༺❘✦━━━━━━┓\n┃ ✘ Bᴏᴛ Vᴇʀsɪᴏɴ : 1.2.7 ✘\n┃ ✘ Aʟɪᴠᴇ Sɪɴᴄᴇ : `{uptime}` ✘\n┃ ✘ Oᴡɴᴇʀ : `{DEFAULTUSER}` ✘\n┃ ✘ Sᴛᴀᴛᴜꜱ : `{dbhealth}` ✘\n┗━━━━━━✦❘༻༺❘✦━━━━━━┛\n┏━━━━━━✦❘༻༺❘✦━━━━━━┓\n┃ ⁭⁫     📡 Pɪɴɢ : `0.004` ms\n┗━━━━━━✦❘༻༺❘✦━━━━━━┛\n ↠━━━━━ღ◆ღ━━━━━↞"
+    cat_caption = "Hm"
     results = await event.client.inline_query(Config.TG_BOT_USERNAME, cat_caption)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
     await event.delete()
