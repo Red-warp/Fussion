@@ -28,7 +28,7 @@ from . import CMD_INFO, GRP_INFO, PLG_INFO, check_owner
 from .logger import logging
 
 LOGS = logging.getLogger(__name__)
-
+user = Config.ALIVE_NAME
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 CATLOGO = "https://telegra.ph/file/493268c1f5ebedc967eba.jpg"
 tr = Config.COMMAND_HAND_LER
@@ -51,35 +51,9 @@ def ibuild_keyboard(buttons):
             keyb.append([Button.url(btn[0], btn[1])])
     return keyb
 
-"""
-def main_menu():
-    text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
-        \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
-    buttons = [
-        (Button.inline("ℹ️ Info", data="check"),),
-        (
-            Button.inline(f"👮‍♂️ Admin ({len(GRP_INFO['admin'])})", data="admin_menu"),
-            Button.inline(f"🤖 Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
-        ),
-        (
-            Button.inline(f"🎨 Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
-            Button.inline(f"🧩 Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
-        ),
-        (
-            Button.inline(f"🧰 Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
-            Button.inline(f"🗂 Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
-        ),
-        (
-            Button.inline(f"➕ Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
-            Button.inline(
-                f"⚰️ Useless ({len(GRP_INFO['useless'])})", data="useless_menu"
-            ),
-        ),
-        (Button.inline("🔒 Close Menu", data="close"),),
-    ]
 
-    return text, buttons
-"""
+def main_menu():
+    text = f"**Bᴏᴛ Oғ {user}\n\nMᴀɪɴ Mᴇɴᴜ\nPʟᴜɢɪɴs ~ 279\n\nⲂⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ\n╭━━━━━━━━━━━━━━━➣\n┣⪼ Ⲟⲱⲛⲉʀ - ཞ𝔼𝔻 𝕎𝔸ℝℙ\n┣⪼ Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ - 1.2.7\n┣⪼ Ⳙⲣⲧⲓⲙⲉ - 2m.42s\n┣⪼ Ⲣⲩⲧⲏⲟⲛ - 3.9.96\n╰━━━━━━━━━━━━━━━➣**"
 
 def command_in_category(cname):
     cmds = 0
