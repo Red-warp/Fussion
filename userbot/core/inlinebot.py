@@ -26,7 +26,7 @@ from ..plugins import mention
 from ..sql_helper.globals import gvarstatus
 from . import CMD_INFO, GRP_INFO, PLG_INFO, check_owner
 from .logger import logging
-
+uptime = await get_readable_time((time.time() - StartTime))
 LOGS = logging.getLogger(__name__)
 user = Config.ALIVE_NAME
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
