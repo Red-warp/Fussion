@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"hm"
+    text = f"**Bᴏᴛ Oғ {user}\n\n Mᴀɪɴ Mᴇɴᴜ\n Pʟᴜɢɪɴs ~ 279\n\n Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ\n ╭━━━━━━━━━━━━━━━➣\n\n ┣⪼ Ⲟⲱⲛⲉʀ - {user}\n ┣⪼ Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ - 1.2.7\n ┣⪼ Ⳙⲣⲧⲓⲙⲉ - 2m.42s\n ┣⪼ Ⲧⲉⳑⲉⲧⲏⲟⲛ - 1.23.0\n ╰━━━━━━━━━━━━━━━➣**"
     buttons = [
         (Button.inline("ℹ️ Info", data="check"),),
         (
