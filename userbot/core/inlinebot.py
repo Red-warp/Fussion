@@ -57,7 +57,7 @@ def main_menu():
     buttons = [
         (Button.inline("ℹ️ Info", data="check"),),
         (
-            Button.inline(f"👮‍♂️ Admin ({len(GRP_INFO['admin'])})", data="admin_menu"),
+            Button.inline(f"👮‍♂️ Admin ({len(GRP_INFO['admin'])})", data="menu"),
             Button.inline(f"🤖 Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
         ),
         (
