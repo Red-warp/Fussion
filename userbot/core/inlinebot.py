@@ -26,7 +26,7 @@ from ..plugins import mention
 from ..sql_helper.globals import gvarstatus
 from . import CMD_INFO, GRP_INFO, PLG_INFO, check_owner
 from .logger import logging
-uptime = await get_readable_time((time.time() - StartTime))
+
 LOGS = logging.getLogger(__name__)
 user = Config.ALIVE_NAME
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"**Bᴏᴛ Oғ {user}\n\nMᴀɪɴ Mᴇɴᴜ\nPʟᴜɢɪɴs ~ 279\n\nⲂⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ\n╭━━━━━━━━━━━━━━━➣\n┣⪼ Ⲟⲱⲛⲉʀ - {user}\n┣⪼ Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ - 1.2.7\n┣⪼ Ⳙⲣⲧⲓⲙⲉ - {uptime}\n┣⪼ Ⲣⲩⲧⲏⲟⲛ - 3.9.99\n╰━━━━━━━━━━━━━━━➣**"
+    text = f"**Bᴏᴛ Oғ {user}\n\nMᴀɪɴ Mᴇɴᴜ\nPʟᴜɢɪɴs ~ 279\n\nⲂⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ\n╭━━━━━━━━━━━━━━━➣\n┣⪼ Ⲟⲱⲛⲉʀ - {user}\n┣⪼ Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ - 1.2.7\n┣⪼ Ⳙⲣⲧⲓⲙⲉ - 2.43ms\n┣⪼ Ⲣⲩⲧⲏⲟⲛ - 3.9.99\n╰━━━━━━━━━━━━━━━➣**"
 
 def command_in_category(cname):
     cmds = 0
