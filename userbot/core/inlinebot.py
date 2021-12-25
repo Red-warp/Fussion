@@ -51,7 +51,7 @@ def ibuild_keyboard(buttons):
             keyb.append([Button.url(btn[0], btn[1])])
     return keyb
 
-
+"""
 def main_menu():
     text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
         \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
@@ -79,7 +79,7 @@ def main_menu():
     ]
 
     return text, buttons
-
+"""
 
 def command_in_category(cname):
     cmds = 0
