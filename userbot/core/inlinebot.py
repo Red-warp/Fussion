@@ -54,20 +54,7 @@ def ibuild_keyboard(buttons):
 
 def main_menu():
     text = f"**Bᴏᴛ Oғ {user}\n\n Mᴀɪɴ Mᴇɴᴜ\n Pʟᴜɢɪɴs ~ 279\n\n Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ\n ╭━━━━━━━━━━━━━━━➣\n ┣⪼ Ⲟⲱⲛⲉʀ - {user}\n ┣⪼ Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ - 1.2.7\n ┣⪼ Ⳙⲣⲧⲓⲙⲉ - 2m.42s\n ┣⪼ Ⲧⲉⳑⲉⲧⲏⲟⲛ - 1.23.0\n ╰━━━━━━━━━━━━━━━➣**"
-    buttons = [
-        (Button.inline("🔌 Pʟᴜɢɪɴs 🔌", data="check"),),
-        
-            Button.inline(f"📍 Pɪɴɢ 📍", data="menu"),
-            (Button.inline(f"🧑‍💻 Uᴘᴅᴀᴛᴇs 🧑‍💻", data="bot_menu"),
-        
-        (
-            Button.inline(f"💖 Sᴜᴘᴘᴏʀᴛ 💖", data="fun_menu"),
-           ( Button.inline(f"⚙ Sᴇᴛᴛɪɴɢs ⚙", data="misc_menu"),
-        ),
-        (Button.inline("🚫 Cʟᴏsᴇ 🚫", data="close"),),
-    ]
-
-    return text, buttons
+    return text
 def command_in_category(cname):
     cmds = 0
     for i in GRP_INFO[cname]:
