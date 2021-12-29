@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    pic = "https://te.legra.ph/file/d61b2a086b54aa5ef6cf4.jpg"
+    file = "https://te.legra.ph/file/d61b2a086b54aa5ef6cf4.jpg"
     text = f"**Bᴏᴛ Oғ {user}\n\n Mᴀɪɴ Mᴇɴᴜ\n Pʟᴜɢɪɴs ~ 279\n\n Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ\n ╭━━━━━━━━━━━━━━━➣\n ┣⪼ Ⲟⲱⲛⲉʀ - {user}\n ┣⪼ Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ - 1.2.7\n ┣⪼ Ⳙⲣⲧⲓⲙⲉ - 2m.42s\n ┣⪼ Ⲧⲉⳑⲉⲧⲏⲟⲛ - 1.23.0\n ╰━━━━━━━━━━━━━━━➣**"
     buttons =  [
         [Button.inline("🔌 Pʟᴜɢɪɴs 🔌", data="what?"),
@@ -63,7 +63,7 @@ def main_menu():
         [Button.url("⚙ Sᴇᴛᴛɪɴɢs ⚙" , "https://t.me/Red_warp")],
         (Button.inline("🚫 Cʟᴏsᴇ 🚫", data="close"),),
     ]
-    return text, buttons, pic
+    return text, buttons, file
 def command_in_category(cname):
     cmds = 0
     for i in GRP_INFO[cname]:
