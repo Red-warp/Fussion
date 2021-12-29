@@ -574,7 +574,7 @@ async def inline_handler(event):  # sourcery no-metrics
 @catub.tgbot.on(CallbackQuery(data=re.compile(b"close")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
-    await event.delete
+    await event.delete()
 
 
 @catub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
