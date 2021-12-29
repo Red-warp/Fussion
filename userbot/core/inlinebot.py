@@ -59,16 +59,7 @@ def main_menu():
                 Button.inline("📍 Pɪɴɢ 📍", data="bitch")],
         [Button.url("🧑‍💻 Uᴘᴅᴀᴛᴇs 🧑‍💻", "https://t.me/DarkFussion"),
                 Button.url("💓 Sᴜᴘᴘᴏʀᴛ 💓", "https://t.me/Dark_Fussion_chat")],
-        (
-            Button.inline(f"🧰 Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
-            Button.inline(f"🗂 Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
-        ),
-        (
-            Button.inline(f"➕ Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
-            Button.inline(
-                f"⚰️ Useless ({len(GRP_INFO['useless'])})", data="useless_menu"
-            ),
-        ),
+        [Button.url("⚙ Sᴇᴛᴛɪɴɢs ⚙" , "https://t.me/Red_warp")],
         (Button.inline("🔒 Close Menu", data="close"),),
     ]
     return text, buttons
