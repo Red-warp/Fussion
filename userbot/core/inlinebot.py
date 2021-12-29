@@ -60,7 +60,7 @@ def main_menu():
         [Button.url("🧑‍💻 Uᴘᴅᴀᴛᴇs 🧑‍💻", "https://t.me/DarkFussion"),
                 Button.url("💓 Sᴜᴘᴘᴏʀᴛ 💓", "https://t.me/Dark_Fussion_chat")],
         [Button.url("⚙ Sᴇᴛᴛɪɴɢs ⚙" , "https://t.me/Red_warp")],
-        (Button.inline("🔒 Close Menu", data="close"),),
+        (Button.inline("🚫 Cʟᴏsᴇ 🚫", data="close"),),
     ]
     return text, buttons
 def command_in_category(cname):
@@ -574,10 +574,7 @@ async def inline_handler(event):  # sourcery no-metrics
 @catub.tgbot.on(CallbackQuery(data=re.compile(b"close")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
-    buttons = [
-        (Button.inline("Open Menu", data="mainmenu"),),
-    ]
-    await event.edit("Menu Closed", buttons=buttons)
+    await event.delete
 
 
 @catub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
