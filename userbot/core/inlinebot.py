@@ -63,7 +63,7 @@ def main_menu():
         [Button.url("⚙ Sᴇᴛᴛɪɴɢs ⚙" , "https://t.me/Red_warp")],
         (Button.inline("🚫 Cʟᴏsᴇ 🚫", data="close"),),
     ]
-    return text, buttons
+    return text
 def command_in_category(cname):
     cmds = 0
     for i in GRP_INFO[cname]:
@@ -657,8 +657,7 @@ async def on_plug_in_callback_query_handler(event):
 @catub.tgbot.on(CallbackQuery(data=re.compile(rb"mainmenu")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
-    _result = fusion_plugs()
-    await event.edit(_result[0], buttons=_result[1])
+    await event.edit("Fusion", buttons=buttons)
 
 
 @catub.tgbot.on(
