@@ -63,7 +63,7 @@ def main_menu():
         [Button.url("⚙ Sᴇᴛᴛɪɴɢs ⚙" , "https://t.me/Red_warp")],
         (Button.inline("🚫 Cʟᴏsᴇ 🚫", data="close"),),
     ]
-    return text, buttons, file
+    return text, buttons
 def command_in_category(cname):
     cmds = 0
     for i in GRP_INFO[cname]:
