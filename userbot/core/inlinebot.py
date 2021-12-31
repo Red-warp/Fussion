@@ -53,10 +53,10 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    file = "https://te.legra.ph/file/d61b2a086b54aa5ef6cf4.jpg"
+    "https://te.legra.ph/file/d61b2a086b54aa5ef6cf4.jpg"
     text = f"**Bᴏᴛ Oғ {user}\n\n Mᴀɪɴ Mᴇɴᴜ\n Pʟᴜɢɪɴs ~ 279\n\n Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ\n ╭━━━━━━━━━━━━━━━➣\n ┣⪼ Ⲟⲱⲛⲉʀ - {user}\n ┣⪼ Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ - 1.2.7\n ┣⪼ Ⳙⲣⲧⲓⲙⲉ - 2m.42s\n ┣⪼ Ⲧⲉⳑⲉⲧⲏⲟⲛ - 1.23.0\n ╰━━━━━━━━━━━━━━━➣**"
     buttons =  [
-        [Button.inline("🔌 Pʟᴜɢɪɴs 🔌", data="what?"),
+        [Button.inline("🔌 Pʟᴜɢɪɴs 🔌", data="fusion_plugs1"),
                 Button.inline("📍 Pɪɴɢ 📍", data="bitch")],
         [Button.url("🧑‍💻 Uᴘᴅᴀᴛᴇs 🧑‍💻", "https://t.me/DarkFussion"),
                 Button.url("💓 Sᴜᴘᴘᴏʀᴛ 💓", "https://t.me/Dark_Fussion_chat")],
@@ -572,9 +572,33 @@ async def inline_handler(event):  # sourcery no-metrics
         await event.answer([result] if result else None)
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
-async def users(event):
-       await event.delete()
+
+@catub.tgbot.on(CallbackQuery(data=re.compile(b"fusion_plugs")))
+@check_owner
+async def on_plug_in_callback_query_handler(event):
+    buttons =  [     (Button.inline("ℹ️ Info", data="check"),),
+        (
+            Button.inline(f"👮‍♂️ Admin ({len(GRP_INFO['admin'])})", data="admin_menu"),
+            Button.inline(f"🤖 Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
+        ),
+        (
+            Button.inline(f"🎨 Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
+            Button.inline(f"🧩 Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
+        ),
+        (
+            Button.inline(f"🧰 Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
+            Button.inline(f"🗂 Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
+        ),
+        (
+            Button.inline(f"➕ Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
+            Button.inline(
+                f"⚰️ Useless ({len(GRP_INFO['useless'])})", data="useless_menu"
+            ),
+        ),
+        (Button.inline("🔒 Close Menu", data="close"),),
+    ]
+    text = f"Fusion"
+    await event.edit(text, buttons=buttons)
 
 @catub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
 async def on_plugin_callback_query_handler(event):
