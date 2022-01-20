@@ -103,7 +103,7 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"Hᴇʟʟᴏ {mention} ❤️\nHᴇy Myꜱᴇʟꜰ **ᖇᗩᑎǤᗴᖇ**, Aꜱꜱɪꜱᴛᴀɴᴛ Bᴏᴛ Oꜰ My Mᴀꜱᴛᴇʀ {my_mention}\nU Cᴀɴ Cᴏɴᴛᴀᴄᴛ My Mᴀꜱᴛᴇʀ Tʜʀᴏᴜɢʜ Mᴇ ...🥰\nFᴇᴇʟ Fʀᴇᴇ Tᴏ Mᴇꜱꜱᴀɢᴇ.....\n➖➖➖➖➖➖➖➖➖➖➖➖➖\nRᴇᴀᴅ Tʜᴇ Rᴜʟᴇꜱ Bᴇʟᴏᴡ......⚠️\n\n🔰 Wʜᴇɴ I Gᴇᴛ Fʀᴇᴇ Tɪᴍᴇ , I ʟʟ Rᴇᴩʟy U 💯✅"
+            start_msg = f"Hᴇʟʟᴏ {mention} ❤️\nHᴇy Myꜱᴇʟꜰ **ᖇᗩᑎǤᗴᖇ**,\nAꜱꜱɪꜱᴛᴀɴᴛ Oꜰ My Mᴀꜱᴛᴇʀ {my_mention}\nU Cᴀɴ Cᴏɴᴛᴀᴄᴛ My Mᴀꜱᴛᴇʀ Tʜʀᴏᴜɢʜ Mᴇ ...🥰\nFᴇᴇʟ Fʀᴇᴇ Tᴏ Mᴇꜱꜱᴀɢᴇ.....\n➖➖➖➖➖➖➖➖➖➖➖➖➖\nRᴇᴀᴅ Tʜᴇ Rᴜʟᴇꜱ Bᴇʟᴏᴡ......⚠️\n\n🔰 Wʜᴇɴ I Gᴇᴛ Fʀᴇᴇ Tɪᴍᴇ , I ʟʟ Rᴇᴩʟy U 💯✅"
         buttons = [
             (
                 Button.url("Repo", "https://github.com/sandy1709/catuserbot"),
